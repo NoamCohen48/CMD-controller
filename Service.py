@@ -7,14 +7,14 @@ PORT = 12345
 TIMEOUT = 1
 
 
-def execute_command(command: string) -> string:
+def execute_command(command: str) -> str:
     try:
         result = subprocess.run(args=command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                 text=True, shell=True, timeout=TIMEOUT)
-        return fix_message(result.stdout)
+        return result.stdout
 
     except subprocess.TimeoutExpired:
-        return fix_message("<timeout>")
+        return "<timeout>\n"
 
     except Exception as e:
         raise e
@@ -41,7 +41,6 @@ def run_server():
         try:
             # open a client handler with a new thread
             client_sock, address = server_sock.accept()
-            print("connected")
             handle_client(client_sock)
         except socket.timeout:
             pass
