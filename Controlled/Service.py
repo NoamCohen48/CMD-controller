@@ -21,7 +21,6 @@ def execute_command(command: str) -> str:
 
 
 def handle_client(client_sock: socket.socket):
-    # TODO: add to run command and send answer
     # processing client request and answering
     data = receive_message(client_sock)
     while data != ServiceSettings.end:
