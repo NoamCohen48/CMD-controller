@@ -9,4 +9,4 @@ A python script that run's and waits for connection, when connected receives com
 ##### Controller
 A C# + WinForm program with GUI from which you can connect and communicate with the Controlled program on other machine. 
 ![pic of program](https://i.ibb.co/7rSK8S6/download.png)
-* a python terminal version is also available
+* A python terminal version is also available
