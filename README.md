@@ -4,7 +4,7 @@ This program has controller and controlled programs.
 The controller connects to a pc running the controlled program, which enables him to run cmd commands remotely.  
 
 ##### Controlled
-A python script that waits for connection, when connected receives command, run it, answer and repeat till disconnecting. 
+A python script that receives command, executes it and respond with the answer. 
 
 ##### Controller
 A C# + WinForm program with GUI from which you can connect and communicate with the Controlled program on a different machine. 
